@@ -1,0 +1,16 @@
+---
+
+- name: "Manage Apache Development"
+  host: redhat
+  become: true
+  gather_facts: false
+  tasks:
+   - name: "Install Apache Web Server"
+     package:
+      name: "httpd"
+      state: "present"
+   - name: "start and enable web server"
+     service:
+      name: "httpd"
+      state: "started"
+      enabled: true
