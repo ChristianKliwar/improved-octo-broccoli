@@ -7,10 +7,10 @@
   tasks:
     - name: "Install Apache Web Server"
       ansible.builtin.package:
-       name: "httpd"
-       state: "present"
+        name: "httpd"
+        state: "present"
     - name: "start and enable web server"
       ansible.builtin.service:
-       name: "httpd"
-       state: "started"
-       enabled: true
+        name: "httpd"
+        state: "started"
+        enabled: true
